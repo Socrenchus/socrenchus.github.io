@@ -3,17 +3,27 @@ import { Mail, Sparkles, Users, FileText, Twitter, Linkedin, Github } from 'luci
 
 function App() {
   const [email, setEmail] = useState('')
+  const [showSuccess, setShowSuccess] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle email submission
-    console.log('Email submitted:', email)
-    alert('Thanks for your interest! We\'ll be in touch soon.')
+    // Handle email submission - integrate with backend in production
+    setShowSuccess(true)
     setEmail('')
+    setTimeout(() => setShowSuccess(false), 5000)
   }
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
+      {/* Success Toast */}
+      {showSuccess && (
+        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
+          <div className="bg-gradient-to-r from-cyber-blue to-deep-violet px-6 py-3 rounded-lg shadow-lg">
+            <p className="font-semibold">Thanks for your interest! We'll be in touch soon.</p>
+          </div>
+        </div>
+      )}
+      
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +31,11 @@ function App() {
             <div className="text-2xl font-bold bg-gradient-to-r from-cyber-blue to-deep-violet bg-clip-text text-transparent">
               Socrenchus
             </div>
-            <button className="px-6 py-2 bg-gradient-to-r from-cyber-blue to-deep-violet rounded-lg font-semibold hover:scale-105 transition-transform duration-200">
+            <button 
+              type="button"
+              aria-label="Join Beta Program"
+              className="px-6 py-2 bg-gradient-to-r from-cyber-blue to-deep-violet rounded-lg font-semibold hover:scale-105 transition-transform duration-200"
+            >
               Join Beta
             </button>
           </div>

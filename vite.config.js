@@ -9,10 +9,15 @@ export default defineConfig({
     react(),
     {
       name: 'create-nojekyll',
+      apply: 'build',
       closeBundle() {
         // Create .nojekyll file to disable Jekyll processing on GitHub Pages
-        const outDir = resolve(__dirname, 'dist')
-        writeFileSync(resolve(outDir, '.nojekyll'), '', 'utf-8')
+        try {
+          const outDir = resolve(__dirname, 'dist')
+          writeFileSync(resolve(outDir, '.nojekyll'), '', 'utf-8')
+        } catch (error) {
+          console.warn('Failed to create .nojekyll file:', error.message)
+        }
       }
     }
   ],

@@ -7,19 +7,26 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [
     react(),
-    {
-      name: 'create-nojekyll',
-      apply: 'build',
-      closeBundle() {
-        // Create .nojekyll file to disable Jekyll processing on GitHub Pages
-        try {
-          const outDir = resolve(__dirname, 'dist')
-          writeFileSync(resolve(outDir, '.nojekyll'), '', 'utf-8')
-        } catch (error) {
-          console.warn('Failed to create .nojekyll file:', error.message)
+    (() => {
+      let outDir = 'dist'
+      return {
+        name: 'create-nojekyll',
+        apply: 'build',
+        configResolved(config) {
+          // Store the resolved config for later use
+          outDir = config.build.outDir
+        },
+        closeBundle() {
+          // Create .nojekyll file to disable Jekyll processing on GitHub Pages
+          try {
+            const outputDir = resolve(__dirname, outDir)
+            writeFileSync(resolve(outputDir, '.nojekyll'), '', 'utf-8')
+          } catch (error) {
+            console.warn('Failed to create .nojekyll file:', error.message)
+          }
         }
       }
-    }
+    })()
   ],
   base: '/',
   build: {

@@ -51,7 +51,7 @@ const LandingPage = () => {
               src="/logo.png"
               alt="Socrenchus Logo"
               loading="eager"
-              className="-mt-8"
+              className="w-[1124px] -mt-8"
             />
           </div>
           <div className="hidden md:flex items-center space-x-8">

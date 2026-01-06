@@ -45,7 +45,7 @@ const LandingPage = () => {
 
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50 py-3' : 'bg-transparent py-6'}`}>
-        <div className="container mx-auto px-6 flex justify-between items-center">
+        <div className="container mx-auto px-6 flex justify-between items-center bg-slate-900/30 backdrop-blur-sm rounded-lg">
           <div className="flex items-start overflow-hidden h-20">
             <img
               src="/logo.png"

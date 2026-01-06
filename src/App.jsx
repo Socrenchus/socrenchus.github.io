@@ -51,6 +51,7 @@ const LandingPage = () => {
               src="https://github.com/user-attachments/assets/5466f5ce-ab93-46cc-a2e8-af3735928545" 
               alt="Socrenchus Logo" 
               className="h-12 w-auto object-contain"
+              loading="eager"
             />
           </div>
           <div className="hidden md:flex items-center space-x-8">

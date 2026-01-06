@@ -46,11 +46,12 @@ const LandingPage = () => {
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50 py-3' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-              <span className="font-bold text-white text-lg">S</span>
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-white uppercase">Socrenchus</span>
+          <div className="flex items-center">
+            <img 
+              src="https://github.com/user-attachments/assets/5466f5ce-ab93-46cc-a2e8-af3735928545" 
+              alt="Socrenchus Logo" 
+              className="h-12 w-auto object-contain"
+            />
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#philosophy" className="text-sm font-medium text-slate-400 hover:text-white transition-colors">Philosophy</a>

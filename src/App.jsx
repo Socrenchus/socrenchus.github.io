@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Shield, 
-  Zap, 
-  MessageSquare, 
-  Users, 
-  ArrowRight, 
-  BrainCircuit, 
-  Network, 
+import {
+  Shield,
+  Zap,
+  MessageSquare,
+  Users,
+  ArrowRight,
+  BrainCircuit,
+  Network,
   ChevronRight,
   Sparkles,
   BookOpen
@@ -45,12 +45,14 @@ const LandingPage = () => {
 
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50 py-3' : 'bg-transparent py-6'}`}>
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
-              <span className="font-bold text-white text-lg">S</span>
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-white uppercase">Socrenchus</span>
+        <div className="container mx-auto px-6 flex justify-between items-center bg-slate-900/30 backdrop-blur-sm rounded-lg">
+          <div className="flex items-start overflow-hidden h-20">
+            <img
+              src="/logo.png"
+              alt="Socrenchus Logo"
+              loading="eager"
+              className="w-[1124px] -mt-8"
+            />
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#philosophy" className="text-sm font-medium text-slate-400 hover:text-white transition-colors">Philosophy</a>
@@ -77,13 +79,13 @@ const LandingPage = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Socrenchus is the first AI sparring partner that uses proactive cross-examination to turn your internal monologue into Intellectual Equity. 
+            Socrenchus is the first AI sparring partner that uses proactive cross-examination to turn your internal monologue into Intellectual Equity.
           </p>
-          
+
           <form onSubmit={handleSubmit} className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-3 max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your professional email" 
+            <input
+              type="email"
+              placeholder="Enter your professional email"
               className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all text-white"
               required
               value={email}
@@ -102,17 +104,17 @@ const LandingPage = () => {
       <section id="envoy" className="py-24 px-6 relative z-10 border-t border-slate-900">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard 
+            <FeatureCard
               icon={<BrainCircuit className="text-blue-400" />}
               title="The Socratic Spark"
               description="Instead of waiting for you, Socrenchus pings you daily via SMS with provocative questions based on your specific research gaps."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<Shield className="text-indigo-400" />}
               title="Intellectual Ghost"
               description="Every debate builds your siloed Memory Bank. We extract your unique claims and contradictions into a persistent digital twin."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<Zap className="text-blue-400" />}
               title="The Midwife Engine"
               description="Once a thesis is defended, the AI orchestrates the collaborative draft, citing your grounded data and past publications automatically."
@@ -132,7 +134,7 @@ const LandingPage = () => {
               The Gale-Shapley of Ideas.
             </h2>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-              We don't do "networking." We solve a variant of the **Stable Marriage Problem** using your intellectual capital. 
+              We don't do "networking." We solve a variant of the **Stable Marriage Problem** using your intellectual capital.
               Socrenchus identifies the one partner whose knowledge completes your thesis, ensuring that every collaboration is a stable, high-output collision of minds.
             </p>
             <ul className="space-y-4">

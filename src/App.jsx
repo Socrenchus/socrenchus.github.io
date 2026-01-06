@@ -12,6 +12,10 @@ import {
   BookOpen
 } from 'lucide-react';
 
+// Configuration constants
+const WAITLIST_LIMIT = 50;
+const LAUNCH_QUARTER = 'Q1 2026';
+
 const LandingPage = () => {
   const [email, setEmail] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,7 +36,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-blue-500/30">
+    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-500/30">
       {/* Background Decorative Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-900/10 blur-[120px]" />
@@ -90,7 +94,7 @@ const LandingPage = () => {
               <ArrowRight size={18} />
             </button>
           </form>
-          <p className="mt-4 text-xs text-slate-500">Limited to 50 active thinkers for the initial Sparring Cycle.</p>
+          <p className="mt-4 text-xs text-slate-500">Limited to {WAITLIST_LIMIT} active thinkers for the initial Sparring Cycle.</p>
         </div>
       </section>
 
@@ -210,7 +214,7 @@ const LandingPage = () => {
               <span>Secure Your Seed Access</span>
               <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <p className="mt-6 text-sm text-slate-600">Phase One launching Q1 2026. Join the Elite Fifty.</p>
+            <p className="mt-6 text-sm text-slate-600">Phase One launching {LAUNCH_QUARTER}. Join the Elite {WAITLIST_LIMIT}.</p>
           </div>
         </div>
       </section>

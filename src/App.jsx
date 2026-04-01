@@ -82,10 +82,10 @@ const LandingPage = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50 py-4">
+      <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50 py-3">
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-start overflow-hidden h-16">
-            <img src="/logo.png" alt="Socrenchus Logo" loading="eager" className="w-[1124px] -mt-6" />
+          <div className="flex items-start overflow-hidden h-10 md:h-16">
+            <img src="/logo.png" alt="Socrenchus Logo" loading="eager" className="w-auto h-full md:w-[1124px] md:h-auto md:-mt-6 object-contain object-left" />
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#portfolio" className="text-sm font-medium text-slate-400 hover:text-white transition-colors">Portfolio</a>

@@ -175,11 +175,7 @@ const LandingPage = () => {
                 hello@socrenchus.com
               </a>
             </div>
-            <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800">
-              <p className="text-slate-400 text-sm mb-1">Business Address</p>
-              <p className="text-white font-medium">Socrenchus LLC</p>
-              <p className="text-slate-400 text-sm">Spring Valley, NY 10977</p>
-            </div>
+
           </div>
         </div>
       </section>

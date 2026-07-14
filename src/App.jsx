@@ -27,7 +27,7 @@ const PORTFOLIO = [
     name: 'Code & Cosmos',
     tagline: 'AI-Generated Science & Tech Podcast',
     description: 'A fully AI-produced podcast exploring the intersection of software engineering, science, and the cosmos. Co-hosted by ALEX and NOVA — two AI personalities — with new episodes published weekly to YouTube and major podcast platforms.',
-    url: 'https://www.youtube.com/@BryanGoldstein',
+    url: 'https://www.youtube.com/playlist?list=PL8fxj2X9RsFG-JpENPQ0Ggt-LrUhDXzOx',
     category: 'Media / Podcast',
     status: 'Active',
     icon: <Radio size={24} />,
@@ -206,7 +206,7 @@ const LandingPage = () => {
           <div className="flex flex-wrap justify-center gap-6">
             <a href="/consulting.html" className="hover:text-white transition-colors">Socrenchus Consulting</a>
             <a href="https://bingodirect.net" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">BingoDirect</a>
-            <a href="https://www.youtube.com/@BryanGoldstein" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Code &amp; Cosmos</a>
+            <a href="https://www.youtube.com/playlist?list=PL8fxj2X9RsFG-JpENPQ0Ggt-LrUhDXzOx" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Code &amp; Cosmos</a>
             <a href="https://xerotoai.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">XeroToAI</a>
             <a href="https://brysgo.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">brysgo.com</a>
             <a href="mailto:hello@socrenchus.com" className="hover:text-white transition-colors">Contact</a>
